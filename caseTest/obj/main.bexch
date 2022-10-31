@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\GNAT\2021\bin\caseTest\casetest.gpr
+20221031130512 d02dd500e63d06f0bf7c3dcaadfeac64
+C:\GNAT\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
+20220915121856 12f5812b13c0ac85af0e4e18419a999a
+[BOUND OBJECT FILES]
+C:\GNAT\2021\bin\caseTest\obj\movementpro.o
+C:\GNAT\2021\bin\caseTest\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\GNAT\2021\bin\caseTest\obj\
+-LC:\GNAT\2021\bin\caseTest\obj\
+-LC:\GNAT\Ada_Drivers_Library\boards\MicroBit_v2\obj\full_lib_Debug\
+-LC:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\
+-static
+-static-libgcc
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnarl.a
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnat.a
