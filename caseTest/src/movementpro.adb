@@ -1,20 +1,21 @@
-with MicroBit.IOsForTasking;
 package body movementPro is
-   Speed : constant MicroBit.IOsForTasking.Analog_Value := 1023; --between 0 and 1023
-   Forward : constant Boolean := True; -- forward is true, backward is false
 
    
-   procedure changingDirection is 
-      type setDirection is (ahead, backward, left, right);
-      carDirection : setDirection := ahead;
+   procedure changingDirection(carDirection : setDirection) is
    begin
    case carDirection is
       when ahead => movementPro.front;
+           Put_Line("forward");
       when backward => movementPro.back;
+           Put_Line("backward");
       when left => movementPro.left;
+           Put_Line("left");
       when right => movementPro.right;
+           Put_Line("right");
       end case;
    end changingDirection;
+   
+ 
    procedure front is
 
    begin
@@ -377,8 +378,9 @@ package body movementPro is
    begin
       loop
          myClock := Clock;
-         changingDirection;
+         changingDirection(left);
          delay until myClock + Milliseconds(200);
       end loop;
    end k;
+
 end movementPro;

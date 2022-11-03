@@ -1,0 +1,302 @@
+V "GNAT Lib v2021"
+A -gnatA
+A --RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+A -mlittle-endian
+A -mthumb
+A -mfloat-abi=hard
+A -mfpu=fpv4-sp-d16
+A -mcpu=cortex-m4
+A -march=armv7e-m+fp
+P DB LC TF  SS ZX
+
+RN
+RV NO_DELAY
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV STATIC_PRIORITIES
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV MAX_TASKS=1
+
+U movementpro%b		movementpro.adb		5841a7d3 OO PK IL
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali  AD
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+
+U movementpro%s		movementpro.ads		7887d599 EE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W microbit%s		microbit.ads		microbit.ali
+W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali
+Z system%s		system.ads		system.ali
+Z system.parameters%s	s-parame.adb		s-parame.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
+T 1 1
+
+D ada.ads		20220915120040 76789da1 ada%s
+D a-except.ads		20220915120042 946f3014 ada.exceptions%s
+D a-finali.ads		20220915120042 bf4f806b ada.finalization%s
+D a-interr.ads		20220915120044 bdf68b51 ada.interrupts%s
+D a-intnam.ads		20220915120044 543e27b6 ada.interrupts.names%s
+D a-reatim.ads		20220915120044 cfe92427 ada.real_time%s
+D a-retide.ads		20220915120044 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20220915120042 119b8fb3 ada.streams%s
+D a-string.ads		20220915120042 90ac6797 ada.strings%s
+D a-sttebu.ads		20220915120042 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20220915120042 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20220915120042 9eaa38c6 ada.tags%s
+D a-taside.ads		20220915120044 00e3a3f6 ada.task_identification%s
+D a-textio.ads		20220915120040 ffc84532 ada.text_io%s
+D a-unccon.ads		20220915120040 0e9b276f ada.unchecked_conversion%s
+D hal.ads		20220915121856 2b42c80e hal%s
+D hal-gpio.ads		20220915121856 7f0c2ffe hal.gpio%s
+D hal-i2c.ads		20220915121856 0ed73138 hal.i2c%s
+D hal-spi.ads		20220915121856 fe139819 hal.spi%s
+D hal-uart.ads		20220915121856 d58316b4 hal.uart%s
+D interfac.ads		20220915120040 edec285f interfaces%s
+D microbit.ads		20220922120836 3b54a3e8 microbit%s
+D microbit-iosfortasking.ads  20220915121856 60e097d3 microbit.iosfortasking%s
+D movementpro.ads	20221103114716 2846235f movementpro%s
+D movementpro.adb	20221103115330 7007848c movementpro%b
+D nrf.ads		20220915121854 74cf72f5 nrf%s
+D nrf-device.ads	20220915121854 9c9916c4 nrf.device%s
+D nrf-gpio.ads		20220915121854 ab6d4598 nrf.gpio%s
+D nrf-rtc.ads		20220915121854 36d88130 nrf.rtc%s
+D nrf-spi_master.ads	20220915121854 a8ff49a3 nrf.spi_master%s
+D nrf-timers.ads	20221020130336 15fa58e3 nrf.timers%s
+D nrf-twi.ads		20220915121854 4881713f nrf.twi%s
+D nrf-uart.ads		20220915121854 9fa4b8b9 nrf.uart%s
+D nrf_svd.ads		20220915121854 87ba21d7 nrf_svd%s
+D nrf_svd-rtc.ads	20220915121854 57c7ffc8 nrf_svd.rtc%s
+D nrf_svd-spi.ads	20220915121854 6e2ffb69 nrf_svd.spi%s
+D nrf_svd-timer.ads	20220915121854 ba50db1c nrf_svd.timer%s
+D nrf_svd-twi.ads	20220915121854 68301534 nrf_svd.twi%s
+D nrf_svd-uart.ads	20220915121854 83bcebc8 nrf_svd.uart%s
+D system.ads		20220915120044 ad54c63c system%s
+D s-bb.ads		20220915120040 09e072ae system.bb%s
+D s-bbbopa.ads		20220915120044 f68efaf0 system.bb.board_parameters%s
+D s-bbbosu.ads		20220915120044 0f820a2a system.bb.board_support%s
+D s-bbcppr.ads		20220915120044 ac5bcd4d system.bb.cpu_primitives%s
+D s-bbinte.ads		20220915120044 c88d39da system.bb.interrupts%s
+D s-bbmcpa.ads		20220915120044 9339744a system.bb.mcu_parameters%s
+D s-bbpara.ads		20220915120044 63167d1e system.bb.parameters%s
+D s-bbthre.ads		20220915120044 c94b446f system.bb.threads%s
+D s-bbthqu.ads		20220915120044 cd23d79e system.bb.threads.queues%s
+D s-bbtime.ads		20220915120044 ad086247 system.bb.time%s
+D s-finmas.ads		20220915120044 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20220915120044 4ff27390 system.finalization_root%s
+D s-interr.ads		20220915120044 d74bd991 system.interrupts%s
+D s-multip.ads		20220915120044 f33e0e35 system.multiprocessors%s
+D s-mufalo.ads		20220915120044 3dca0374 system.multiprocessors.fair_locks%s
+D s-musplo.ads		20220915120044 69fa25c4 system.multiprocessors.spin_locks%s
+D s-osinte.ads		20220915120044 229b14dd system.os_interface%s
+D s-parame.ads		20220915120044 8e90778f system.parameters%s
+D s-pooglo.ads		20220915120044 ede33ef8 system.pool_global%s
+D s-putima.ads		20220915120044 4e095881 system.put_images%s
+D s-secsta.ads		20220915120040 56a2861c system.secondary_stack%s
+D s-stalib.ads		20220915120044 472fbca8 system.standard_library%s
+D s-stoele.ads		20220915120040 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20220915120040 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20220915120044 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20220915120042 7bdda3fa system.stream_attributes%s
+D s-tasinf.ads		20220915120044 801abd01 system.task_info%s
+D s-taspri.ads		20220915120044 37f162b4 system.task_primitives%s
+D s-taskin.ads		20220915120044 989d56fd system.tasking%s
+D s-taprob.ads		20220915120044 c8fc0753 system.tasking.protected_objects%s
+D s-tasres.ads		20220915120044 0c8ef6fb system.tasking.restricted%s
+D s-tarest.ads		20220915120044 c88b6d9a system.tasking.restricted.stages%s
+D s-traent.ads		20220915120044 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20220915120040 2b077493 system.unsigned_types%s
+D unchconv.ads		20220915120040 ca2f9e18 unchecked_conversion%s
+G a e
+G c b b b [b movementpro 1 1 none]
+G c Z s b [kTK movementpro 11 9 none]
+G c Z s s [kTKVIP movementpro 11 4 none]
+G c Z s b [changingdirection movementpro 12 14 none]
+G c Z s b [front movementpro 13 14 none]
+G c Z s b [back movementpro 14 14 none]
+G c Z s b [right movementpro 15 14 none]
+G c Z s b [left movementpro 16 14 none]
+G c Z s b [forwardleft movementpro 17 14 none]
+G c Z s b [forwardright movementpro 18 14 none]
+G c Z s b [backwardright movementpro 19 14 none]
+G c Z s b [backwardleft movementpro 20 14 none]
+G c Z s b [rotleft movementpro 21 14 none]
+G c Z s b [rotright movementpro 22 14 none]
+G c Z s b [curvedright movementpro 23 14 none]
+G c Z s b [lateralarcright movementpro 24 14 none]
+G c Z s b [lateralarcleft movementpro 25 14 none]
+G r c none [b movementpro 1 1 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [b movementpro 1 1 none] [set microbit__iosfortasking 22 14 none]
+G r c none [b movementpro 1 1 none] [write microbit__iosfortasking 34 14 none]
+G r c none [kTK movementpro 11 9 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [kTK movementpro 11 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [kTK movementpro 11 9 none] [write microbit__iosfortasking 34 14 none]
+G r c none [changingdirection movementpro 12 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [changingdirection movementpro 12 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [changingdirection movementpro 12 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [front movementpro 13 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [front movementpro 13 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [front movementpro 13 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [back movementpro 14 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [back movementpro 14 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [back movementpro 14 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [right movementpro 15 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [right movementpro 15 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [right movementpro 15 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [left movementpro 16 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [left movementpro 16 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [left movementpro 16 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [forwardleft movementpro 17 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [forwardleft movementpro 17 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [forwardleft movementpro 17 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [forwardright movementpro 18 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [forwardright movementpro 18 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [forwardright movementpro 18 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [backwardright movementpro 19 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [backwardright movementpro 19 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [backwardright movementpro 19 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [backwardleft movementpro 20 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [backwardleft movementpro 20 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [backwardleft movementpro 20 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [rotleft movementpro 21 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [rotleft movementpro 21 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [rotleft movementpro 21 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [rotright movementpro 22 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [rotright movementpro 22 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [rotright movementpro 22 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [curvedright movementpro 23 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [curvedright movementpro 23 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [curvedright movementpro 23 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [lateralarcright movementpro 24 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [lateralarcright movementpro 24 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [lateralarcright movementpro 24 14 none] [write microbit__iosfortasking 34 14 none]
+G r c none [lateralarcleft movementpro 25 14 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [lateralarcleft movementpro 25 14 none] [set microbit__iosfortasking 22 14 none]
+G r c none [lateralarcleft movementpro 25 14 none] [write microbit__iosfortasking 34 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 24|1r6 1r25 4r6 4r23
+X 6 a-reatim.ads
+40K13*Real_Time 181e18 24|1w10 1r29
+50M9*Time<50|46M9> 25|377r17
+60I9*Time_Span<50|81I9>
+67V13*Clock{50M9}<50|134p13> 25|380s21
+71V14*"+"{50M9} 25|382s30
+127V13*Milliseconds{60I9} 25|382s32
+X 14 a-textio.ads
+36K13*Text_IO 52e16 24|4w10 4r27
+46U14*Put_Line 25|8s12 10s12 12s12 14s12
+X 17 hal-gpio.ads
+47h9*GPIO_Point
+X 18 hal-i2c.ads
+48h9*I2C_Port
+X 19 hal-spi.ads
+48h9*SPI_Port
+X 20 hal-uart.ads
+48h9*UART_Port
+X 22 microbit.ads
+58K9*MicroBit 115e13 24|2r6 7r21 25|23r7 27r7 28r7 31r7 32r7 36r7 37r7 40r7
+. 41r7 43r7 44r7 51r7 55r7 56r7 59r7 60r7 64r7 65r7 68r7 69r7 71r7 72r7 78r7
+. 82r7 83r7 86r7 87r7 91r7 92r7 95r7 96r7 98r7 99r7 105r7 109r7 110r7 113r7
+. 114r7 118r7 119r7 122r7 123r7 125r7 126r7 133r7 137r7 138r7 141r7 142r7
+. 146r7 147r7 150r7 151r7 153r7 154r7 161r7 165r7 166r7 169r7 170r7 174r7
+. 175r7 178r7 179r7 181r7 182r7 188r7 192r7 193r7 196r7 197r7 201r7 202r7
+. 205r7 206r7 208r7 209r7 216r7 220r7 221r7 224r7 225r7 229r7 230r7 233r7
+. 234r7 236r7 237r7 244r7 248r7 249r7 252r7 253r7 257r7 258r7 261r7 262r7
+. 264r7 265r7 271r7 275r7 276r7 279r7 280r7 284r7 285r7 288r7 289r7 291r7
+. 292r7 296r29 297r28 300r7 304r7 305r7 308r7 309r7 313r7 314r7 317r7 318r7
+. 320r7 321r7 326r7 330r7 331r7 334r7 335r7 339r7 340r7 343r7 344r7 346r7
+. 347r7 353r7 357r7 358r7 361r7 362r7 366r7 367r7 370r7 371r7 373r7 374r7
+X 23 microbit-iosfortasking.ads
+5K18*IOsForTasking 91e27 24|2w15 7r30 25|23r16 27r16 28r16 31r16 32r16 36r16
+. 37r16 40r16 41r16 43r16 44r16 51r16 55r16 56r16 59r16 60r16 64r16 65r16
+. 68r16 69r16 71r16 72r16 78r16 82r16 83r16 86r16 87r16 91r16 92r16 95r16
+. 96r16 98r16 99r16 105r16 109r16 110r16 113r16 114r16 118r16 119r16 122r16
+. 123r16 125r16 126r16 133r16 137r16 138r16 141r16 142r16 146r16 147r16 150r16
+. 151r16 153r16 154r16 161r16 165r16 166r16 169r16 170r16 174r16 175r16 178r16
+. 179r16 181r16 182r16 188r16 192r16 193r16 196r16 197r16 201r16 202r16 205r16
+. 206r16 208r16 209r16 216r16 220r16 221r16 224r16 225r16 229r16 230r16 233r16
+. 234r16 236r16 237r16 244r16 248r16 249r16 252r16 253r16 257r16 258r16 261r16
+. 262r16 264r16 265r16 271r16 275r16 276r16 279r16 280r16 284r16 285r16 288r16
+. 289r16 291r16 292r16 296r38 297r37 300r16 304r16 305r16 308r16 309r16 313r16
+. 314r16 317r16 318r16 320r16 321r16 326r16 330r16 331r16 334r16 335r16 339r16
+. 340r16 343r16 344r16 346r16 347r16 353r16 357r16 358r16 361r16 362r16 366r16
+. 367r16 370r16 371r16 373r16 374r16
+22U14*Set 25|27s30 28s30 31s30 32s30 36s30 37s30 40s30 41s30 55s30 56s30
+. 59s30 60s30 64s30 65s30 68s30 69s30 82s30 83s30 86s30 87s30 91s30 92s30
+. 95s30 96s30 109s30 110s30 113s30 114s30 118s30 119s30 122s30 123s30 137s30
+. 138s30 141s30 142s30 146s30 147s30 150s30 151s30 165s30 166s30 169s30 170s30
+. 174s30 175s30 178s30 179s30 192s30 193s30 196s30 197s30 201s30 202s30 205s30
+. 206s30 220s30 221s30 224s30 225s30 229s30 230s30 233s30 234s30 248s30 249s30
+. 252s30 253s30 257s30 258s30 261s30 262s30 275s30 276s30 279s30 280s30 284s30
+. 285s30 288s30 289s30 304s30 305s30 308s30 309s30 313s30 314s30 317s30 318s30
+. 330s30 331s30 334s30 335s30 339s30 340s30 343s30 344s30 357s30 358s30 361s30
+. 362s30 366s30 367s30 370s30 371s30
+28I9*Analog_Value<short_integer> 24|7r44 25|296r52 297r51
+30U14*Set_Analog_Period_Us 25|23s30 51s30 78s30 105s30 133s30 161s30 188s30
+. 216s30 244s30 271s30 300s30 326s30 353s30
+34U14*Write 25|43s30 44s30 71s30 72s30 98s30 99s30 125s30 126s30 153s30 154s30
+. 181s30 182s30 208s30 209s30 236s30 237s30 264s30 265s30 291s30 292s30 320s30
+. 321s30 346s30 347s30 373s30 374s30
+X 24 movementpro.ads
+6K9*movementPro 26l5 26e16 25|1b14 7r21 9r24 11r20 13r21 386l5 386t16
+7i4*Speed{23|28I9} 25|43r40 44r40 71r40 72r40 98r40 99r40 125r40 126r40 153r40
+. 154r40 181r40 182r40 208r40 209r40 236r40 237r40 264r40 265r40 291r40 292r40
+. 346r40 347r40 373r40 374r40
+8b4*Forward{boolean} 25|27r37 28r41 31r37 32r41 36r38 37r42 40r38 41r42 82r41
+. 83r37 86r37 87r41 91r38 92r42 95r42 96r38 109r37 110r41 113r41 114r37 118r42
+. 119r38 122r38 123r42 137r41 138r41 141r37 142r41 146r38 147r42 150r42 151r42
+. 165r37 166r41 169r41 170r41 174r42 175r42 178r38 179r42 192r41 193r41 196r41
+. 197r37 201r42 202r38 205r42 206r42 220r41 221r37 224r41 225r41 229r42 230r42
+. 233r42 234r38 248r41 249r37 252r41 253r37 257r38 258r42 261r38 262r42 275r37
+. 276r41 279r37 280r41 284r42 285r38 288r42 289r38 304r37 305r41 308r37 309r41
+. 313r38 314r42 317r38 318r42 330r37 331r41 334r41 335r41 339r42 340r38 343r42
+. 344r42 357r41 358r37 361r41 362r41 366r38 367r42 370r42 371r42
+9E9*setDirection 9e55 12r47 25|4r47
+9n26*ahead{9E9} 25|7r12
+9n33*backward{9E9} 25|9r12
+9n43*left{9E9} 25|11r12 381r28
+9n49*right{9E9} 25|13r12
+11t9*k 25|376b14 384l8 384t9
+12U14*changingDirection 12>32 25|4b14 16l8 16t25 381s10
+12e32 carDirection{9E9} 25|4b32 6r9
+13U14*front 25|7s33 19b14 45l8 45t13
+14U14*back 25|9s36 47b14 73l8 73t12
+15U14*right 25|13s33 101b14 127l8 127t13
+16U14*left 25|11s32 74b14 100l8 100t12
+17U14*forwardLeft 25|129b14 155l8 155t19
+18U14*forwardRight 25|157b14 183l8 183t20
+19U14*backwardRight 25|184b14 210l8 210t21
+20U14*backwardLeft 25|212b14 238l8 238t20
+21U14*rotLeft 25|240b14 266l8 266t15
+22U14*rotRight 25|267b14 293l8 293t16
+23U14*curvedRight 25|295b14 322l8 322t19
+24U14*lateralArcRight 25|323b14 348l8 348t23
+25U14*lateralArcLeft 25|350b14 375l8 375t22
+X 25 movementpro.adb
+48b7 Forward{boolean} 55r37 56r41 59r37 60r41 64r38 65r42 68r38 69r42
+296i7 SpeedRight{23|28I9} 321r40
+297i7 SpeedLeft{23|28I9} 320r40
+377m7 myClock{6|50M9} 380m10 382r22
+X 50 s-bbtime.ads
+46M9*Time
+81I9*Time_Span<long_long_integer>
+X 53 s-interr.ads
+97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
+X 61 s-secsta.ads
+46P9*SS_Stack_Ptr(43R9)
+X 69 s-taskin.ads
+398V13*Get_Sec_Stack{61|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 72 s-tarest.ads
+232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
+
