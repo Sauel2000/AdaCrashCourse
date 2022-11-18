@@ -6,6 +6,6 @@ package servoControl is
    procedure turnStart;
    procedure turn0;
    procedure turn180;
-
+   procedure servoDegree (angleToRotate : Servo_Set_Point);
 
 end servoControl;

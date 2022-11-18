@@ -1,4 +1,9 @@
 package body servoControl is
+   procedure servoDegree  (angleToRotate : Servo_Set_Point) is
+      servo : Pin_Id := 4;
+   begin
+      MicroBit.Servos.Go(servo,angleToRotate);
+   end servoDegree;
 
    procedure turnStart is
       servo : Pin_Id := 4;
@@ -6,9 +11,9 @@ package body servoControl is
    begin
       
          
-         MicroBit.Servos.Go(servo, setpoint);
+      MicroBit.Servos.Go(servo, setpoint);
       
-         delay(0.02);
+      delay(0.02);
 
       
    end turnStart;
@@ -18,9 +23,9 @@ package body servoControl is
    begin
       
          
-         MicroBit.Servos.Go(servo, setpoint);
+      MicroBit.Servos.Go(servo, setpoint);
       
-         delay(0.02);
+      delay(0.02);
 
       
    end turn0;
@@ -30,9 +35,7 @@ package body servoControl is
    begin
       
          
-         MicroBit.Servos.Go(servo, setpoint);
-      
-         delay(0.02);
+      MicroBit.Servos.Go(servo, setpoint);
 
       
    end turn180;
