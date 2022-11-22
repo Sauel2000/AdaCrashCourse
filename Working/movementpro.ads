@@ -12,4 +12,7 @@ package movementpro is
    procedure left;
    procedure rotRight;
    procedure stop;
+   procedure forwardRight;
+   procedure forwardLeft;
+   procedure rotLeft;
 end movementpro;

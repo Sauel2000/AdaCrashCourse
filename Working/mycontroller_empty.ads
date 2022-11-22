@@ -3,12 +3,12 @@ with movementpro;
 with Ada.Real_Time; use Ada.Real_Time;
 with MicroBit.Console; use MicroBit.Console;
 with Ultrasonic; use Ultrasonic;
---with myMusic; use myMusic;
+with myMusic; use myMusic;
 with MicroBit.Servos; use MicroBit.Servos;
 with Ada.Execution_Time; use Ada.Execution_Time;
 package mycontroller_empty is
    
-   type Direction is (ahead, backward, leftSide, rightSide,rotRight,stop);
+   type Direction is (ahead, backward, leftSide, rightSide,rotRight,stop,forwardLeft,forwardRight,rotLeft);
    type availableAngle is (Angle);
    procedure directionControl(carDirection : Direction);
    task Sense with Priority => 3;
@@ -18,21 +18,26 @@ package mycontroller_empty is
    
    task Act with Priority=> 1;
 
-   protected MotorDriver is
+   protected MotorController is
       function GetDirection return Direction;
       procedure SetDirection (carDirection : Direction);
-      procedure SetServoAngle (servoAngle : Servo_Set_Point);
-      procedure SetDistance (Distance : Distance_cm);
+
       procedure SetRotationState (State : Boolean);
-      function GetAngle return Servo_Set_Point;
-      function GetDistance return Distance_cm;
       function GetRotationState return Boolean;
    private
       DriveDirection : Direction;
-      angleToRotate : Servo_Set_Point;
-      DistanceAhead : Distance_cm;
       rotationState : Boolean;
-   end MotorDriver;
-   
-
-end mycontroller_empty;
+   end MotorController;
+   protected ServoController is 
+      procedure SetServoAngle (servoAngle : Servo_Set_Point);
+      function GetAngle return Servo_Set_Point;
+   private
+      angleToRotate : Servo_Set_Point;
+   end ServoController;
+   protected UltrasonicController is
+      procedure SetDistance (Distance : Distance_cm);
+      function GetDistance return Distance_cm;
+   private
+      DistanceAhead : Distance_cm;
+   end UltrasonicController;
+   end mycontroller_empty;
