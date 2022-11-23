@@ -34,14 +34,12 @@ package body mycontroller_empty is
    begin
       Ultrasonic.Setup(10,11);      
       loop
-         
          myClock := Clock;
          UltrasonicController.SetDistance(Read);
          Put_Line ("Read" & Distance_cm'Image(UltrasonicController.GetDistance));
+
+           
          delay until myClock + Milliseconds(100);
-         --myMusic.rock;
-         --delay until myClock + Milliseconds(100);
-         
       end loop;
    end sense;
 
@@ -49,87 +47,43 @@ package body mycontroller_empty is
       myClock : Time;
       isRightChecked : Boolean :=False;
       isLeftChecked : Boolean := False;
+      isMiddelChecked : Boolean :=False;
+      servoAngle : Servo_Set_Point := 60;
    begin
       loop
          myClock := Clock;
+         ServoController.SetServoAngle(30);
+         delay until myClock + Milliseconds(100);
+         ServoController.SetServoAngle(100);
+         delay until myClock + Milliseconds(200);
          
          if UltrasonicController.GetDistance < 30 then
-            MotorController.SetRotationState(False);
-            MotorController.SetDirection(stop);
-            delay until myClock + Milliseconds(200);
-            --CHECKING LEFT SIDE VIEW
-            ServoController.SetServoAngle(100); --LEFT ANGLE
-            delay until myClock + Milliseconds(300);
-            if (UltrasonicController.GetDistance < 30) and (isLeftChecked=False) then
-               MotorController.SetDirection(rotLeft);
-               delay until myClock + Milliseconds(500);
-               isRightChecked := True;
-               isLeftChecked :=True;
-            end if; 
-            if (isRightChecked = False) and (isLeftChecked=True) then 
-               ServoController.SetServoAngle(30);
-               delay until myClock + Milliseconds(200);
-               if UltrasonicController.GetDistance < 30 then
-                  MotorController.SetDirection(rotRight);
-                  delay until myClock + Milliseconds(500);
-               end if;
-            end if;
-            ----CHECKING RIGHT SIDE VIEW
-            --ServoController.SetServoAngle(30);
-            --delay until myClock + Milliseconds(2000);
-            --if UltrasonicController.GetDistance > 30 then
-            --   MotorController.SetDirection(rotRight);
-            --   delay until myClock + Milliseconds(275);
-            --end if;
-         else
-            MotorController.SetDirection(ahead);
-            delay until myClock + Milliseconds(125);
-            ServoController.SetServoAngle(65);
-            delay until myClock + Milliseconds(150);
+            ServoController.SetDistanceWall(True);
+         elsif UltrasonicController.GetDistance > 30 then
+            ServoController.SetDistanceWall(False);
          end if;
-         --if UltrasonicController.GetDistance < 30 then
-         --   delay until myClock + Milliseconds(200);
-         --   if UltrasonicController.GetDistance <30 then
-         --      MotorController.SetDirection(rotLeft);
-         --     delay until myClock + Milliseconds(100);
-         --   end if;
-         --end if;
-         --ServoController.SetServoAngle(30);
-         --delay until myClock + Milliseconds(100);
-         --CHEKING RIGHT SIDE VIEW 
-         --if UltrasonicController.GetDistance <30 then
-         --   ServoController.SetServoAngle(3); --RIGHT ANGLE
-         --   delay until myClock + Milliseconds(200);
-
-         --   ServoController.SetServoAngle(115); --BACK TO AHEAD ANGLE
-         --   delay until myClock + Milliseconds(100);
-         --   MotorController.SetRotationState(True);
-         --   delay until myClock + Milliseconds(125);
-         --else
-         --   MotorController.SetDirection(ahead);
-         --   delay until myClock + Milliseconds(25);
-         --   ServoController.SetServoAngle(70); --RETURN TO AHEAD ANGLE
-         --   delay until myClock + Milliseconds(200);
-            
-         --end if;
-         --end if;
+         
+         delay until myClock + Milliseconds(300);
+         
       end loop;
    end think;
    
    task body act is
       myClock : Time;
+      drive : Boolean := False;
    begin
       loop
          myClock := Clock;
-         Put_Line ("Direction is: " & Direction'Image (MotorController.GetDirection));
-         --directionControl(MotorController.GetDirection);
-         --Put_Line ("Bool state: " & Boolean'Image (MotorController.GetRotationState));
-         --delay until myClock + Milliseconds(10);
-         if MotorController.GetRotationState = True then
-            movementpro.rotRight;
-            delay until myClock + Milliseconds(3200);
-            MotorController.SetRotationState(False);
+         if ServoController.GetDistanceWall = True then
+            directionControl(rotRight);
+            Put_Line("rotate");
+         elsif ServoController.GetDistanceWall = False then
+            directionControl(ahead);
+            Put_Line("Forward");
          end if;
+         delay until myClock + Milliseconds(300);
+         --movementpro.stop;
+           
       end loop;
    end act;
    
@@ -138,6 +92,7 @@ package body mycontroller_empty is
       procedure SetDirection (carDirection : Direction) is
       begin
          DriveDirection := carDirection;
+         --movementpro.(carDirection);
       end SetDirection;
       procedure SetRotationState (State : Boolean) is
       begin
@@ -154,6 +109,16 @@ package body mycontroller_empty is
       end GetRotationState;
    end MotorController;
    protected body ServoController is
+      procedure SetDistanceWall (distanceW : Boolean) is
+      begin
+         distanceWall := distanceW;
+         
+      end SetDistanceWall;
+      function GetDistanceWall return Boolean is
+      begin
+         return distanceWall;
+      end GetDistanceWall;
+         
       procedure SetServoAngle (servoAngle : Servo_Set_Point) is
       begin
          servoControl.servoDegree(servoAngle);
